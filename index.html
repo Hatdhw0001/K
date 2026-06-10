@@ -1,0 +1,1033 @@
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes, viewport-fit=cover">
+    <title>花傲天导航 | 充值700反388</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        :root {
+            --bg: #f5f5f7;
+            --surface: rgba(255, 255, 255, 0.72);
+            --surface-2: rgba(255, 255, 255, 0.55);
+            --border: rgba(0, 0, 0, 0.06);
+            --border-strong: rgba(0, 0, 0, 0.1);
+            --text: #1d1d1f;
+            --text-secondary: #6e6e73;
+            --text-tertiary: #86868b;
+            --accent: #0071e3;
+            --accent-hover: #0077ed;
+            --accent-light: rgba(0, 113, 227, 0.08);
+            --glass-blur: saturate(180%) blur(20px);
+            --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.06);
+            --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.05), 0 2px 6px rgba(0, 0, 0, 0.04);
+            --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.08), 0 4px 14px rgba(0, 0, 0, 0.04);
+            --radius-sm: 12px;
+            --radius-md: 18px;
+            --radius-lg: 24px;
+            --radius-xl: 28px;
+            --transition: 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            user-select: none;
+            -webkit-tap-highlight-color: transparent;
+            -webkit-touch-callout: none;
+            outline: none;
+        }
+
+        body {
+            background: #e8e8ed;
+            font-family: -apple-system, 'Inter', 'SF Pro Display', 'Segoe UI', system-ui, 'Poppins', 'Helvetica Neue', sans-serif;
+            padding: 20px 16px 40px;
+            min-height: 100vh;
+            color: var(--text);
+            position: relative;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: -40%;
+            left: -30%;
+            width: 160%;
+            height: 160%;
+            background: radial-gradient(ellipse at 25% 25%, rgba(0, 113, 227, 0.06) 0%, transparent 50%),
+                radial-gradient(ellipse at 75% 60%, rgba(120, 80, 255, 0.04) 0%, transparent 50%),
+                radial-gradient(ellipse at 50% 80%, rgba(255, 149, 0, 0.03) 0%, transparent 50%);
+            pointer-events: none;
+            z-index: -1;
+            animation: ambientShift 20s ease-in-out infinite alternate;
+        }
+
+        @keyframes ambientShift {
+            0% { transform: translate(0, 0) scale(1); }
+            100% { transform: translate(2%, 1%) scale(1.02); }
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: var(--surface);
+            backdrop-filter: var(--glass-blur);
+            -webkit-backdrop-filter: var(--glass-blur);
+            border-radius: var(--radius-xl);
+            padding: 20px 22px 30px;
+            box-shadow: var(--shadow-lg);
+            border: 1px solid var(--border);
+            position: relative;
+            overflow: hidden;
+            transition: all var(--transition);
+        }
+
+        .container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(0, 0, 0, 0.06), transparent);
+            pointer-events: none;
+        }
+
+        .status-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 15px;
+            font-weight: 500;
+            padding-bottom: 16px;
+            margin-bottom: 8px;
+            border-bottom: 1px solid var(--border);
+            color: var(--text-secondary);
+            letter-spacing: 0.3px;
+            flex-wrap: nowrap;
+            white-space: nowrap;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            background: var(--surface);
+            backdrop-filter: var(--glass-blur);
+            -webkit-backdrop-filter: var(--glass-blur);
+            border-radius: 40px;
+            padding: 8px 16px;
+            margin: -8px -6px 12px -6px;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .time,
+        .uptime-status {
+            background: var(--surface-2);
+            backdrop-filter: var(--glass-blur);
+            -webkit-backdrop-filter: var(--glass-blur);
+            padding: 4px 12px;
+            border-radius: 40px;
+            border: 1px solid var(--border);
+            color: var(--text);
+            font-weight: 500;
+            font-size: 14px;
+        }
+
+        .uptime-status {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 13px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .uptime-status i {
+            font-size: 11px;
+            color: var(--accent);
+            flex-shrink: 0;
+        }
+
+        .brand-area {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            margin: 10px 0 0 0;
+        }
+
+        .title-group {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .logo-img {
+            width: 42px;
+            height: 42px;
+            border-radius: 12px;
+            object-fit: contain;
+            background: #ffffff;
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow-sm);
+            transition: all var(--transition);
+            flex-shrink: 0;
+        }
+
+        .logo-img:hover {
+            transform: scale(1.05);
+            box-shadow: var(--shadow-md);
+        }
+
+        .main-title {
+            font-size: 38px;
+            font-weight: 800;
+            background: linear-gradient(135deg, #1d1d1f 0%, #3a3a3c 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            letter-spacing: -1px;
+            line-height: 1.1;
+            position: relative;
+        }
+
+        .badge {
+            background: var(--accent-light);
+            backdrop-filter: var(--glass-blur);
+            -webkit-backdrop-filter: var(--glass-blur);
+            border: 1px solid rgba(0, 113, 227, 0.18);
+            padding: 5px 14px;
+            border-radius: 40px;
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--accent);
+            cursor: pointer;
+            transition: all var(--transition);
+            position: relative;
+            overflow: hidden;
+            letter-spacing: 0.2px;
+        }
+
+        .badge::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .badge:hover {
+            background: rgba(0, 113, 227, 0.14);
+            border-color: rgba(0, 113, 227, 0.3);
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(0, 113, 227, 0.12);
+        }
+
+        .badge:hover::before { left: 100%; }
+
+        .badge i { color: var(--accent); margin-right: 3px; }
+
+        .info-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+            margin: 18px 0 26px 0;
+            align-items: stretch;
+        }
+
+        .image-card {
+            flex: 2;
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow-md);
+            transition: all var(--transition);
+            background: #f0f0f2;
+        }
+
+        .image-card:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .image-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.5s ease;
+            max-width: 100%;
+            height: auto;
+        }
+
+        .image-card:hover img {
+            transform: scale(1.03);
+        }
+
+        .wangwang-card {
+            flex: 1.2;
+            background: var(--surface-2);
+            backdrop-filter: var(--glass-blur);
+            -webkit-backdrop-filter: var(--glass-blur);
+            border-radius: var(--radius-md);
+            padding: 16px 18px;
+            border: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            cursor: pointer;
+            transition: all var(--transition);
+            box-shadow: var(--shadow-sm);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .wangwang-icon {
+            width: 26px;
+            height: 26px;
+            border-radius: 8px;
+            object-fit: contain;
+            background: transparent;
+            flex-shrink: 0;
+            transition: transform 0.3s ease;
+        }
+
+        .wangwang-card:hover .wangwang-icon {
+            transform: scale(1.08);
+        }
+
+        .wangwang-text-group {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            line-height: 1.3;
+        }
+
+        .wangwang-card span.wangwang-label {
+            font-weight: 600;
+            font-size: 14px;
+            color: var(--text-secondary);
+            margin-bottom: 2px;
+        }
+
+        .group-number {
+            font-size: 26px;
+            font-weight: 800;
+            color: var(--accent);
+            letter-spacing: 2px;
+            display: inline-block;
+            background: var(--accent-light);
+            padding: 4px 14px;
+            border-radius: 10px;
+            line-height: 1.2;
+            transition: all var(--transition);
+            width: fit-content;
+        }
+
+        .wangwang-card:hover .group-number {
+            background: rgba(0, 113, 227, 0.14);
+            transform: scale(1.03);
+        }
+
+        .wangwang-card:hover {
+            background: rgba(255, 255, 255, 0.75);
+            border-color: var(--border-strong);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .copy-icon-right {
+            font-size: 14px;
+            opacity: 0.7;
+            flex-shrink: 0;
+            margin-left: auto;
+            transition: opacity 0.2s ease;
+        }
+
+        .wangwang-card:hover .copy-icon-right { opacity: 1; }
+
+        .nav-grid {
+            margin: 30px 0 34px;
+            padding: 20px;
+            background: var(--surface-2);
+            backdrop-filter: var(--glass-blur);
+            -webkit-backdrop-filter: var(--glass-blur);
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--border);
+            position: relative;
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            transition: all var(--transition);
+        }
+
+        .nav-grid::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: conic-gradient(from 0deg, transparent, rgba(0, 113, 227, 0.04), transparent);
+            animation: rotate 20s linear infinite;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .tab-buttons {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 18px;
+            position: relative;
+            z-index: 1;
+            flex-wrap: nowrap;
+        }
+
+        .tab-btn {
+            flex: 1;
+            min-width: 0;
+            background: rgba(255, 255, 255, 0.55);
+            backdrop-filter: var(--glass-blur);
+            -webkit-backdrop-filter: var(--glass-blur);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 13px 10px;
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--text-secondary);
+            cursor: pointer;
+            transition: all var(--transition);
+            text-align: center;
+            letter-spacing: 0.4px;
+            position: relative;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+
+        .tab-btn i {
+            margin-right: 4px;
+            font-size: 14px;
+            color: inherit;
+            flex-shrink: 0;
+        }
+
+        .tab-btn:hover {
+            background: rgba(255, 255, 255, 0.8);
+            border-color: var(--border-strong);
+            color: var(--text);
+            transform: translateY(-1px);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .tab-btn.active {
+            background: #ffffff;
+            border-color: rgba(0, 113, 227, 0.25);
+            color: var(--accent);
+            box-shadow: 0 0 0 2px rgba(0, 113, 227, 0.1), var(--shadow-sm);
+            font-weight: 700;
+        }
+
+        .tab-btn.active i { color: var(--accent); }
+
+        .tab-panel {
+            display: none;
+            position: relative;
+            z-index: 1;
+            animation: fadeSlideIn 0.3s ease;
+        }
+
+        .tab-panel.active { display: block; }
+
+        @keyframes fadeSlideIn {
+            from { opacity: 0; transform: translateY(8px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .nav-row {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+            margin-bottom: 16px;
+        }
+
+        .nav-item {
+            text-align: center;
+            cursor: pointer;
+            transition: all var(--transition);
+            position: relative;
+        }
+
+        .nav-item:hover { transform: translateY(-6px); }
+
+        .nav-icon {
+            width: 54px;
+            height: 54px;
+            border-radius: 16px;
+            background: #ffffff;
+            border: 1px solid var(--border);
+            margin: 0 auto 8px;
+            transition: all var(--transition);
+            box-shadow: var(--shadow-sm);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .nav-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            transition: transform 0.3s ease;
+        }
+
+        .nav-item:hover .nav-icon {
+            border-color: var(--border-strong);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08), 0 2px 8px rgba(0, 0, 0, 0.04);
+            transform: scale(1.06);
+        }
+
+        .nav-item:hover .nav-icon img { transform: scale(1.1); }
+
+        .nav-text {
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--text-secondary);
+            white-space: nowrap;
+            letter-spacing: 0.2px;
+            transition: color 0.2s ease;
+        }
+
+        .nav-item:hover .nav-text { color: var(--accent); }
+
+        .empty-panel {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 160px;
+            border: 2px dashed var(--border);
+            border-radius: 16px;
+            background: rgba(255, 255, 255, 0.3);
+            color: var(--text-tertiary);
+            cursor: pointer;
+            transition: all var(--transition);
+        }
+
+        .empty-panel:hover {
+            border-color: rgba(0, 113, 227, 0.3);
+            background: rgba(255, 255, 255, 0.5);
+            box-shadow: inset 0 0 30px rgba(0, 113, 227, 0.03);
+        }
+
+        .empty-panel i {
+            font-size: 34px;
+            margin-bottom: 10px;
+            color: rgba(0, 113, 227, 0.3);
+            transition: all var(--transition);
+        }
+
+        .empty-panel:hover i {
+            color: var(--accent);
+            transform: translateY(-4px);
+        }
+
+        .empty-panel span {
+            font-size: 14px;
+            font-weight: 500;
+            letter-spacing: 0.3px;
+        }
+
+        .extra-section { margin: 14px 0 22px; }
+
+        .extra-title {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding-left: 8px;
+            color: var(--text);
+            position: relative;
+        }
+
+        .extra-title::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 4px;
+            bottom: 4px;
+            width: 3px;
+            background: var(--accent);
+            border-radius: 3px;
+        }
+
+        .extra-title i { font-size: 20px; color: var(--accent); }
+
+        .extra-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 14px;
+        }
+
+        .extra-card {
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: var(--glass-blur);
+            -webkit-backdrop-filter: var(--glass-blur);
+            border-radius: 16px;
+            padding: 14px 5px;
+            text-align: center;
+            transition: all var(--transition);
+            cursor: pointer;
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow-sm);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .extra-card i {
+            font-size: 24px;
+            margin-bottom: 8px;
+            display: block;
+            color: var(--accent);
+            transition: all var(--transition);
+        }
+
+        .extra-card span {
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--text-secondary);
+            transition: all var(--transition);
+        }
+
+        .extra-card:hover {
+            background: #ffffff;
+            border-color: var(--border-strong);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .extra-card:hover i { transform: translateY(-3px); }
+
+        .extra-card:hover span { color: var(--text); }
+
+        .footer-note {
+            margin-top: 32px;
+            text-align: center;
+            padding-top: 18px;
+            border-top: 1px solid var(--border);
+            font-size: 12px;
+            color: var(--text-tertiary);
+            position: relative;
+        }
+
+        .footer-brand {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            flex-wrap: wrap;
+            margin: 14px 0 10px;
+        }
+
+        .footer-brand span {
+            background: rgba(255, 255, 255, 0.55);
+            backdrop-filter: var(--glass-blur);
+            -webkit-backdrop-filter: var(--glass-blur);
+            padding: 6px 16px;
+            border-radius: 30px;
+            border: 1px solid var(--border);
+            color: var(--text-secondary);
+            font-weight: 500;
+            font-size: 13px;
+            transition: all var(--transition);
+        }
+
+        .footer-brand span:hover {
+            background: #ffffff;
+            border-color: var(--border-strong);
+            color: var(--text);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .copyright {
+            letter-spacing: 0.3px;
+            line-height: 1.5;
+            color: var(--text-tertiary);
+        }
+
+        a, button {
+            text-decoration: none;
+            color: inherit;
+            border: none;
+            background: transparent;
+            cursor: pointer;
+        }
+
+        i, .fas, .far { pointer-events: none; }
+
+        .share-mask {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.35);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+        }
+
+        .share-box {
+            width: 85%;
+            max-width: 400px;
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: var(--glass-blur);
+            -webkit-backdrop-filter: var(--glass-blur);
+            border-radius: 24px;
+            padding: 25px 20px;
+            text-align: center;
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow-lg);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .share-tip {
+            font-size: 16px;
+            margin-bottom: 25px;
+            color: var(--text);
+            font-weight: 600;
+        }
+
+        .share-btn-group { display: flex; gap: 15px; }
+
+        .share-btn {
+            flex: 1;
+            padding: 12px 0;
+            border-radius: 14px;
+            font-size: 15px;
+            cursor: pointer;
+            transition: all var(--transition);
+            font-weight: 600;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cancel-btn {
+            background: rgba(0, 0, 0, 0.04);
+            color: var(--text-secondary);
+            border: 1px solid var(--border);
+        }
+
+        .cancel-btn:hover {
+            background: rgba(0, 0, 0, 0.07);
+            border-color: var(--border-strong);
+        }
+
+        .do-share-btn {
+            background: var(--accent);
+            color: #ffffff;
+            border: 1px solid transparent;
+            box-shadow: 0 4px 14px rgba(0, 113, 227, 0.3);
+        }
+
+        .do-share-btn:hover {
+            background: var(--accent-hover);
+            box-shadow: 0 6px 20px rgba(0, 113, 227, 0.4);
+            transform: translateY(-1px);
+        }
+
+        .toast {
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(30, 30, 30, 0.9);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            color: #ffffff;
+            padding: 10px 22px;
+            border-radius: 60px;
+            font-size: 14px;
+            z-index: 9999;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+            animation: fadeInUp 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            font-weight: 500;
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translate(-50%, 20px); }
+            to { opacity: 1; transform: translate(-50%, 0); }
+        }
+
+        @media (max-width: 520px) {
+            .container { padding: 18px 16px 26px; }
+            .main-title { font-size: 32px; }
+            .logo-img { width: 36px; height: 36px; }
+            .status-bar { padding: 6px 12px; margin: -4px -2px 10px -2px; font-size: 13px; }
+            .uptime-status { font-size: 12px; }
+            .extra-grid { grid-template-columns: repeat(2, 1fr); gap: 14px; }
+            .nav-row { gap: 12px; }
+            .nav-icon { width: 46px; height: 46px; }
+            .nav-text { font-size: 11px; }
+            .wangwang-card span.wangwang-label { font-size: 13px; }
+            .footer-brand { gap: 10px; }
+            .tab-btn { font-size: 14px; padding: 10px 8px; }
+            .tab-btn i { font-size: 12px; margin-right: 2px; }
+            .group-number { font-size: 22px; padding: 3px 12px; }
+            .wangwang-icon { width: 24px; height: 24px; }
+        }
+
+        @media (max-width: 420px) {
+            .main-title { font-size: 28px; }
+            .logo-img { width: 30px; height: 30px; }
+            .info-row { flex-direction: column; gap: 14px; }
+            .image-card { flex: auto; width: 100%; }
+            .wangwang-card { flex: auto; width: 100%; }
+            .nav-row { gap: 8px; }
+            .nav-icon { width: 42px; height: 42px; border-radius: 14px; }
+            .tab-btn { font-size: 12px; padding: 9px 6px; border-radius: 10px; letter-spacing: 0.2px; }
+            .tab-btn i { font-size: 11px; margin-right: 2px; }
+            .group-number { font-size: 20px; }
+            .wangwang-icon { width: 22px; height: 22px; }
+        }
+    </style>
+    <script src="js/jq.js"></script>
+</head>
+<body id="v1">
+    <div id="v2" class="container">
+        <div id="v3" class="status-bar">
+            <div class="time" id="liveTimeDisplay">--:--</div>
+            <div id="v4" class="uptime-status">
+                <i id="v5" class="fas fa-link"></i>
+                <span id="v6">本导航由花傲天传媒运营</span>
+            </div>
+        </div>
+        <div id="v7" class="brand-area">
+            <div id="v8" class="title-group">
+                <img id="v76" src="logo.png" alt="Logo" class="logo-img" onerror="this.style.display='none'">
+                <div id="v9" class="main-title">花傲天导航</div>
+                <div class="badge" id="shareBtn">
+                    <i id="v10" class="fas fa-share-alt"></i> 导航分享
+                </div>
+            </div>
+        </div>
+        <div id="v11" class="info-row">
+            <div id="v12" class="image-card">
+                <img id="v13" src="txdhtp.png" alt="黑金龙图">
+            </div>
+            <div id="v14" class="wangwang-card" onclick="copyWangWang()">
+                <img id="v15" src="wwsl.png" alt="旺旺群图标" class="wangwang-icon" onerror="this.style.display='none'">
+                <div id="v16" class="wangwang-text-group">
+                    <span id="v17" class="wangwang-label">官方旺旺群</span>
+                    <span id="v19" class="group-number">511114</span>
+                </div>
+                <i id="v20" class="fas fa-copy copy-icon-right"></i>
+            </div>
+        </div>
+
+        <div id="v21" class="nav-grid">
+            <div id="v77" class="tab-buttons">
+                <button id="v78" class="tab-btn active" data-tab="tab1"><i id="v79" class="fas fa-star"></i> 推荐导航</button>
+                <button id="v80" class="tab-btn" data-tab="tab2"><i id="v81" class="fas fa-th-large"></i> 模拟器</button>
+                <button id="v82" class="tab-btn" data-tab="tab3"><i id="v83" class="fas fa-puzzle-piece"></i> 每日看片</button>
+            </div>
+            <div class="tab-panel active" id="tab1">
+                <div class="nav-row">
+                    <div class="nav-item" onclick="location.href='https://mgokgd.jgqvji.com/app/register.php?site_id=1032&pt=BBF153F3-57C3-3CE0-F675-0A61BDC9F3B3';"><div class="nav-icon"><img src="cf.png" alt="超凡国际"></div><div class="nav-text">超凡国际</div></div>
+                    <div class="nav-item" onclick="location.href='https://156.244.72.6:52159/register?openid=c6a9468621839c89d08ce63230e555c0&sign=081a3dd7c7f5e9060038f2fc220fece7&pt=A2DA50E5-8FAC-5A44-3C23-364155945904';"><div class="nav-icon"><img src="lh.png" alt="领航国际"></div><div class="nav-text">领航国际</div></div>
+                    <div class="nav-item" onclick="location.href='https://ybkvbz.tckqxx.com/app/register.php?site_id=1066&topId=46169&selfPlanId=130922';"><div class="nav-icon"><img src="jxh.jpg" alt="聚鑫汇"></div><div class="nav-text">聚鑫汇</div></div>
+                    <div class="nav-item" onclick="location.href='https://hbffbr.hcjwj.com/app/register.php?site_id=2091&topId=83716';"><div class="nav-icon"><img src="dgl.png" alt="戴高乐"></div><div class="nav-text">戴高乐</div></div>
+                </div>
+                <div class="nav-row">
+                    <div class="nav-item" onclick="location.href='https://mgokgd.jgqvji.com/app/register.php?site_id=1061&pt=6CD2C693-E35E-755E-EE4E-C752A48D4D0A';"><div class="nav-icon"><img src="mx.png" alt="梦想国际"></div><div class="nav-text">梦想国际</div></div>
+                    <div class="nav-item" onclick="location.href='https://psktkx.tckqxx.com/app/register.php?site_id=1065&topId=61022&selfPlanId=57017';"><div class="nav-icon"><img src="龙.png" alt="龙腾国际"></div><div class="nav-text">龙腾国际</div></div>
+                    <div class="nav-item" onclick="location.href='https://156.241.154.116:32724/register?openid=7bb837ae1090bd2c8693d108b3fe02c4&sign=e47d03105426f9560e581c6b898dc4e9&topId=128106';"><div class="nav-icon"><img src="ty.jpg" alt="先锋体育"></div><div class="nav-text">先锋体育</div></div>
+                    <div class="nav-item" onclick="location.href='https://gwx2.jgqvji.com/app/register.php?site_id=1031&pt=6C81141C-0148-8545-D0A5-A7FF66148B02';"><div class="nav-icon"><img src="zt.png" alt="征途国际"></div><div class="nav-text">征途国际</div></div>
+                </div>
+            </div>
+            <div class="tab-panel" id="tab2">
+                <div class="nav-row">
+                    <div class="nav-item" onclick="location.href='https://www.pgsoftslot2.com/home?c=08c0382fc7ab7df87be23101e7d9d59e';"><div class="nav-icon"><img src="pgmnq.jpg" alt="pgmnq"></div><div class="nav-text">PG模拟器</div></div>
+                    <div class="nav-item" onclick="location.href='https://38.12.71.46:9046/PP试玩.php';"><div class="nav-icon"><img src="ppmnq.jpg" alt="ppmnq"></div><div class="nav-text">PP模拟器</div></div>
+                    <div class="nav-item" onclick="location.href='https://bkgame.me/microgaming#0';"><div class="nav-icon"><img src="mgmnq.jpg" alt="mgmnq"></div><div class="nav-text">MG模拟器</div></div>
+                    <div class="nav-item" onclick="location.href='https://download.iplaystar.net/PSS-ON-00141/?access_token=(*--)6e72982bb3f9da8cce7650cde97b53c1&lang=sch&ccy=NON&sm=00&subid=0&fullscr=1&lc=zh-CN&pm=1&ns=0&origin=https://demo-api.iplaystar.net&anal=10&lb=1&stf=0&showver=1';"><div class="nav-icon"><img src="mjhl3.jpg" alt="mjhl3"></div><div class="nav-text">麻将胡了3</div></div>
+                </div>
+                <div class="nav-row">
+                    <div class="nav-item" onclick="location.href='pgcr.html';"><div class="nav-icon"><img src="pgcr.jpg" alt="pgcr"></div><div class="nav-text">PG成人版</div></div>
+                    <div class="nav-item" onclick="location.href='https://38.12.71.46:9046/JDB试玩.php';"><div class="nav-icon"><img src="jdbmnq.jpg" alt="jdbmnq"></div><div class="nav-text">JDB模拟器</div></div>
+                    <div class="nav-item" onclick="location.href='https://yl.ishxu648.com/';"><div class="nav-icon"><img src="kymnq.jpg" alt="kymnq"></div><div class="nav-text">开元模拟器</div></div>
+                    <div class="nav-item" onclick="location.href='https://38.12.71.46:9046/bbin试玩.php';"><div class="nav-icon"><img src="bbin.jpg" alt="bbin"></div><div class="nav-text">bbin模拟器</div></div>
+                </div>
+            </div>
+            <div class="tab-panel" id="tab3">
+                                 <div class="nav-row">
+                    <div id="v22" class="nav-item" onclick="location.href='https://wwavg.lanzoup.com/b019vns0va';">
+                        <div id="v23" class="nav-icon"><img src="yp.jpg" alt="hp8"></div>
+                        <div id="v24" class="nav-text">福利YP</div>
+                    </div>
+                    <div id="v25" class="nav-item" onclick="location.href='https://www.abcisq.cc:8853/type/1';">
+                        <div id="v26" class="nav-icon"><img src="yp2.jpg" alt="hp7"></div>
+                        <div id="v27" class="nav-text">搜AV</div>
+                    </div>
+                    <div id="v28" class="nav-item" onclick="location.href='https://1.btb2831.cc/view/28ef4d4d55aff0a3';">
+                        <div id="v29" class="nav-icon"><img src="yp3.jpg" alt="hp6"></div>
+                        <div id="v30" class="nav-text">逼特逼</div>
+                    </div>
+                    <div id="v31" class="nav-item" onclick="location.href='https://www.htkt142.vip:9527/?iCJZMOHUTIkwlv100drmusMYbC2Sjo%Ij7ApCyhQrJSEWBeZwlWJx3MCDaCIQrVC4hTVxzF3lTXaCVBUIIYweayoLbMUn3YXyxWT8Br=XZ2G';">
+                        <div id="v32" class="nav-icon"><img src="yp4.jpg" alt="hp5"></div>
+                        <div id="v33" class="nav-text">红桃视频</div>
+                    </div>
+                </div>
+                <div class="nav-row">
+                    <div id="v34" class="nav-item" onclick="location.href='https://54c64h.com/?refresh=1775737821671';">
+                        <div id="v35" class="nav-icon"><img src="yp5.jpg" alt="hp4"></div>
+                        <div id="v36" class="nav-text">四虎影库</div>
+                    </div>
+                    <div id="v37" class="nav-item" onclick="location.href='https://13av.com/';">
+                        <div id="v38" class="nav-icon"><img src="yp6.jpg" alt="hp3"></div>
+                        <div id="v39" class="nav-text">13AV</div>
+                    </div>
+                    <div id="v40" class="nav-item" onclick="location.href='https://911blw.vip/';">
+                        <div id="v41" class="nav-icon"><img src="yp7.jpg" alt="hp2"></div>
+                        <div id="v42" class="nav-text">爆料网</div>
+                    </div>
+                    <div id="v43" class="nav-item" onclick="location.href='https://771238.lol/search?key=城中村';">
+                        <div id="v44" class="nav-icon"><img src="yp8.jpg" alt="hp1"></div>
+                        <div id="v45" class="nav-text">爱奇艺</div>
+                    </div>
+                </div>
+            </div>
+
+        <div id="v46" class="extra-section">
+            <div id="v47" class="extra-title"><i id="v48" class="fas fa-compass"></i> 热门APP下载</div>
+            <div id="v49" class="extra-grid">
+                <div id="v50" class="extra-card" onclick="location.href='http://www.wwtalk.site/';"><i id="v51" class="fas fa-user-plus"></i><span id="v52">旺商聊下载</span></div>
+                <div id="v53" class="extra-card" onclick="location.href='https://token.im/';"><i id="v54" class="fas fa-store"></i><span id="v55">imtoken钱包下载</span></div>
+                <div id="v56" class="extra-card" onclick="location.href='https://t.me/';"><i id="v57" class="fas fa-comments"></i><span id="v58">Telegram下载</span></div>
+                <div id="v59" class="extra-card" onclick="location.href='https://www.paopaomiyu.xyz/';"><i id="v60" class="fas fa-eye"></i><span id="v61">泡泡密语下载</span></div>
+            </div>
+        </div>
+        <div id="v62" class="footer-note">
+            <div id="v63" class="footer-brand">
+                <span id="v64"><i id="v65" class="fas fa-wind"></i> 花傲天.top</span>
+                <span id="v66"><i id="v67" class="fas fa-crown"></i> 花傲天传媒 </span>
+            </div>
+            <div id="v70" class="copyright">© 2026-2027 花傲天传媒 | 美加墨世界杯🏆</div>
+            <div id="v71" style="margin-top: 10px; font-size: 11px; opacity:0.6;">
+                <i id="v72" class="fas fa-shield-alt"></i> NG导航 · 注册送58
+            </div>
+        </div>
+    </div>
+    <div class="share-mask" id="shareMask">
+        <div id="v73" class="share-box">
+            <div id="v74" class="share-tip">是否分享当前网站？</div>
+            <div id="v75" class="share-btn-group">
+                <button class="share-btn cancel-btn" id="cancelShare">取消</button>
+                <button class="share-btn do-share-btn" id="confirmShare">分享</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        const tabButtons = document.querySelectorAll('.tab-btn');
+        const tabPanels = document.querySelectorAll('.tab-panel');
+        tabButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                tabButtons.forEach(b => b.classList.remove('active'));
+                tabPanels.forEach(p => p.classList.remove('active'));
+                btn.classList.add('active');
+                const targetId = btn.getAttribute('data-tab');
+                document.getElementById(targetId).classList.add('active');
+            });
+        });
+        const startDate = new Date(2022, 4, 20, 0, 0, 0);
+        function updateRuntime() {
+            const now = new Date();
+            let diffMs = now - startDate;
+            if (diffMs < 0) diffMs = 0;
+            const totalSeconds = Math.floor(diffMs / 1000);
+            const seconds = totalSeconds % 60;
+            const minutes = Math.floor(totalSeconds / 60) % 60;
+            const hours = Math.floor(totalSeconds / 3600) % 24;
+            const days = Math.floor(totalSeconds / 86400);
+            const years = Math.floor(days / 365);
+            const remainDays = days % 365;
+            const timeStr = `${years}年${remainDays}天${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+            const runtimeSpan = document.getElementById('runtimeValue');
+            if (runtimeSpan) runtimeSpan.innerText = timeStr;
+        }
+        updateRuntime();
+        setInterval(updateRuntime, 1000);
+        function updateClock() {
+            const now = new Date();
+            let hours = now.getHours();
+            const minutes = now.getMinutes().toString().padStart(2, '0');
+            let period = '上午';
+            if (hours >= 18) period = '晚上';
+            else if (hours >= 12) period = '下午';
+            let hour12 = hours % 12 || 12;
+            const timeString = `${period}${hour12}:${minutes}`;
+            const timeElem = document.getElementById('liveTimeDisplay');
+            if (timeElem) timeElem.innerText = timeString;
+        }
+        updateClock();
+        setInterval(updateClock, 60000);
+        window.copyWangWang = function() {
+            const groupNumber = "511114";
+            navigator.clipboard.writeText(groupNumber).then(() => {
+                showToast('✓ 旺旺群号已复制');
+            }).catch(() => {
+                alert("旺旺群号: 511114");
+            });
+        };
+        function showToast(text) {
+            const toast = document.createElement('div');
+            toast.className = 'toast';
+            toast.innerText = text;
+            document.body.appendChild(toast);
+            setTimeout(() => toast.remove(), 1800);
+        }
+        const shareBtn = document.getElementById('shareBtn');
+        const shareMask = document.getElementById('shareMask');
+        const cancelShare = document.getElementById('cancelShare');
+        const confirmShare = document.getElementById('confirmShare');
+        const siteUrl = window.location.href;
+        shareBtn.addEventListener('click', () => { shareMask.style.display = 'flex'; });
+        cancelShare.addEventListener('click', () => { shareMask.style.display = 'none'; });
+        confirmShare.addEventListener('click', () => {
+            navigator.clipboard.writeText(siteUrl).then(() => {
+                showToast('✓ 网站链接已复制，快去分享吧！');
+            }).catch(() => {
+                alert('复制失败，请手动复制链接：' + siteUrl);
+            });
+            shareMask.style.display = 'none';
+        });
+        shareMask.addEventListener('click', (e) => {
+            if (e.target === shareMask) { shareMask.style.display = 'none'; }
+        });
+        const allCards = document.querySelectorAll('.nav-item, .extra-card');
+        allCards.forEach(card => {
+            card.addEventListener('click', (e) => {
+                const titleElem = card.querySelector('.nav-text') || card.querySelector('span:last-child');
+                const name = titleElem ? titleElem.innerText.trim() : '服务';
+                console.log(`导航点击: ${name}`);
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,295 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>成人游戏合集</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #1a1a2e, #16213e);
+            color: #fff;
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
+            color: #ff6b6b;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+            margin-bottom: 20px;
+        }
+        .config-info {
+            margin-top: 15px;
+        }
+        .config-info p {
+            margin: 5px 0;
+            font-size: 1.5em;
+            color: #ff6b6b;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 3fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .game-card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 15px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            cursor: pointer;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .game-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            background: rgba(255, 255, 255, 0.15);
+            border-color: rgba(255, 255, 255, 0.3);
+        }
+        .game-card h3 {
+            margin: 10px 0;
+            color: #f8a5c2;
+            font-size: 1.2em;
+        }
+        .game-card .play-btn {
+            background: linear-gradient(45deg, #ff6b6b, #ff8e8e);
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+            margin-top: 10px;
+        }
+        .game-card .play-btn:hover {
+            background: linear-gradient(45deg, #ff8e8e, #ff6b6b);
+            box-shadow: 0 0 10px rgba(255, 107, 107, 0.5);
+        }
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.9em;
+        }
+               .back-btn {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: linear-gradient(45deg, #ff6b6b, #ff8e8e);
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .back-btn:hover {
+            background: linear-gradient(45deg, #ff8e8e, #ff6b6b);
+            box-shadow: 0 0 10px rgba(255, 107, 107, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>成人游戏合集</h1>
+        <div id="config-info" class="config-info"></div>
+    </div>
+    <script>
+        // 通过 get_config.php 接口获取配置信息
+        fetch('get_config.php')
+            .then(response => response.json())
+            .then(data => {
+                const configInfo = document.getElementById('config-info');
+                configInfo.innerHTML = `
+                    <p>${data.description}</p>
+                    <p>${data.copyright}</p>
+                `;
+            })
+            .catch(error => {
+                console.error('认准 花傲天.top:', error);
+                const configInfo = document.getElementById('config-info');
+                configInfo.innerHTML = '<p>认准 花傲天.top</p>';
+            });
+    </script>
+        <button class="back-btn" onclick="window.open('/')"> 返回主页</button>
+    <div class="container">
+        <!-- 中出课程 -->
+        <div class="game-card" onclick="window.open('https://h5c.cqgame.games/h5/6001/?language=zh-cn&token=guest',  '_blank')">
+            <h3>中出课程</h3>
+            <button class="play-btn">立即游玩</button>
+        </div>
+        
+        <!-- 巨乳小护士 -->
+        <div class="game-card" onclick="window.open('https://h5c.cqgame.games/h5/6002/?language=zh-cn&token=guest',  '_blank')">
+            <h3>巨乳小护士</h3>
+            <button class="play-btn">立即游玩</button>
+        </div>
+        
+        <!-- M男调教 -->
+        <div class="game-card" onclick="window.open('https://h5c.cqgame.games/h5/6003/?language=zh-cn&token=guest',  '_blank')">
+            <h3>M男调教</h3>
+            <button class="play-btn">立即游玩</button>
+        </div>
+        
+        <!-- 绝世美尻 -->
+        <div class="game-card" onclick="window.open('https://h5c.cqgame.games/h5/6004/?language=zh-cn&token=guest',  '_blank')">
+            <h3>绝世美尻</h3>
+            <button class="play-btn">立即游玩</button>
+        </div>
+        
+        <!-- 梦幻写真 -->
+        <div class="game-card" onclick="window.open('https://h5c.cqgame.games/h5/6005/?language=zh-cn&token=guest',  '_blank')">
+            <h3>梦幻写真</h3>
+            <button class="play-btn">立即游玩</button>
+        </div>
+        
+        <!-- 竞泳水着 -->
+        <div class="game-card" onclick="window.open('https://h5c.cqgame.games/h5/6006/?language=zh-cn&token=guest',  '_blank')">
+            <h3>竞泳水着</h3>
+            <button class="play-btn">立即游玩</button>
+        </div>
+        
+        <!-- 黑丝诱惑 -->
+        <div class="game-card" onclick="window.open('https://h5c.cqgame.games/h5/6007/?language=zh-cn&token=guest',  '_blank')">
+            <h3>黑丝诱惑</h3>
+            <button class="play-btn">立即游玩</button>
+        </div>
+        
+        <!-- 蕾丝女郎 -->
+        <div class="game-card" onclick="window.open('https://h5c.cqgame.games/h5/6008/?language=zh-cn&token=guest',  '_blank')">
+            <h3>蕾丝女郎</h3>
+            <button class="play-btn">立即游玩</button>
+        </div>
+        
+        <!-- 极速女皇 -->
+        <div class="game-card" onclick="window.open('https://h5c.cqgame.games/h5/6009/?language=zh-cn&token=guest',  '_blank')">
+            <h3>极速女皇</h3>
+            <button class="play-btn">立即游玩</button>
+        </div>
+        
+        <!-- 乳胶女郎 -->
+        <div class="game-card" onclick="window.open('https://h5c.cqgame.games/h5/6010/?language=zh-cn&token=guest',  '_blank')">
+            <h3>乳胶女郎</h3>
+            <button class="play-btn">立即游玩</button>
+        </div>
+        
+        <!-- 兔女郎 -->
+        <div class="game-card" onclick="window.open('https://h5c.cqgame.games/h5/6011/?language=zh-cn&token=guest',  '_blank')">
+            <h3>兔女郎</h3>
+            <button class="play-btn">立即游玩</button>
+        </div>
+        
+        <!-- 虐恋 -->
+        <div class="game-card" onclick="window.open('https://h5c.cqgame.games/h5/6012/?language=zh-cn&token=guest',  '_blank')">
+            <h3>虐恋</h3>
+            <button class="play-btn">立即游玩</button>
+        </div>
+        
+        <!-- 大正浪漫按摩 -->
+        <div class="game-card" onclick="window.open('https://h5c.cqgame.games/h5/6013/?language=zh-cn&token=guest',  '_blank')">
+            <h3>大正浪漫按摩</h3>
+            <button class="play-btn">立即游玩</button>
+        </div>
+        
+        <!-- 旗袍美少女 -->
+        <div class="game-card" onclick="window.open('https://h5c.cqgame.games/h5/6014/?language=zh-cn&token=guest',  '_blank')">
+            <h3>旗袍美少女</h3>
+            <button class="play-btn">立即游玩</button>
+        </div>
+        
+        <!-- 美女汤 -->
+        <div class="game-card" onclick="window.open('https://h5c.cqgame.games/h5/6015/?language=zh-cn&token=guest',  '_blank')">
+            <h3>美女汤</h3>
+            <button class="play-btn">立即游玩</button>
+        </div>
+        
+        <!-- 淘气媚魔 -->
+        <div class="game-card" onclick="window.open('https://h5c.cqgame.games/h5/6016/?language=zh-cn&token=guest',  '_blank')">
+            <h3>淘气媚魔</h3>
+            <button class="play-btn">立即游玩</button>
+        </div>
+        
+        <!-- Time Stop -->
+        <div class="game-card" onclick="window.open('https://h5c.cqgame.games/h5/6017/?language=zh-cn&token=guest',  '_blank')">
+            <h3>Time Stop</h3>
+            <button class="play-btn">立即游玩</button>
+        </div>
+        
+        <!-- 吃甜甜 -->
+        <div class="game-card" onclick="window.open('https://h5c.cqgame.games/h5/6018/?language=zh-cn&token=guest',  '_blank')">
+            <h3>吃甜甜</h3>
+            <button class="play-btn">立即游玩</button>
+        </div>
+        
+        <!-- 无尽渴望 -->
+        <div class="game-card" onclick="window.open('https://h5c.cqgame.games/h5/6019/?language=zh-cn&token=guest',  '_blank')">
+            <h3>无尽渴望</h3>
+            <button class="play-btn">立即游玩</button>
+        </div>
+        
+        <!-- 浪漫满屋 -->
+        <div class="game-card" onclick="window.open('https://h5c.cqgame.games/h5/6020/?language=zh-cn&token=guest',  '_blank')">
+            <h3>浪漫满屋</h3>
+            <button class="play-btn">立即游玩</button>
+        </div>
+        
+        <!-- 激情酒 -->
+        <div class="game-card" onclick="window.open('https://h5c.cqgame.games/h5/6021/?language=zh-cn&token=guest',  '_blank')">
+            <h3>激情酒</h3>
+            <button class="play-btn">立即游玩</button>
+        </div>
+        
+        <!-- 极乐爱抚 -->
+        <div class="game-card" onclick="window.open('https://h5c.cqgame.games/h5/6022/?language=zh-cn&token=guest',  '_blank')">
+            <h3>极乐爱抚</h3>
+            <button class="play-btn">立即游玩</button>
+        </div>
+        
+        <!-- 双倍爽 -->
+        <div class="game-card" onclick="window.open('https://h5c.cqgame.games/h5/6023/?language=zh-cn&token=guest',  '_blank')">
+            <h3>双倍爽</h3>
+            <button class="play-btn">立即游玩</button>
+        </div>
+        
+        <!-- 请捆绑我 -->
+        <div class="game-card" onclick="window.open('https://h5c.cqgame.games/h5/6024/?language=zh-cn&token=guest',  '_blank')">
+            <h3>请捆绑我</h3>
+            <button class="play-btn">立即游玩</button>
+        </div>
+        
+        <!-- 电车绅士 -->
+        <div class="game-card" onclick="window.open('https://h5c.cqgame.games/h5/6025/?language=zh-cn&token=guest',  '_blank')">
+            <h3>电车绅士</h3>
+            <button class="play-btn">立即游玩</button>
+        </div>
+        
+        <!-- 活塞小恶魔 -->
+        <div class="game-card" onclick="window.open('https://h5c.cqgame.games/h5/6026/?language=zh-cn&token=guest',  '_blank')">
+            <h3>活塞小恶魔</h3>
+            <button class="play-btn">立即游玩</button>
+        </div>
+    </div>
+    
+    <div class="footer">
+        <p>© 2026 成人游戏合集 | 仅限成年人访问</p>
+    </div>
+</body>
+</html>
